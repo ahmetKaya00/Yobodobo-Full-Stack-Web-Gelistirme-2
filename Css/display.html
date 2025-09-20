@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display: inline-block;
+            width: 250px;
+            height: 125px;
+            border: 1px solid #333;
+        }
+        .container-flex{
+            display: flex;
+            justify-content: space-between;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+        .flex-item{
+            background-color: lightcyan;
+            padding: 20px;
+            margin: 5px;
+        }
+        .container-grid{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 10px;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+        .grid-item{
+            background-color: lightyellow;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">Lorem ipsum dolor sit amet.</div>
+    <div class="block">Lorem ipsum dolor sit amet.</div>
+
+    <a href="">Deneme</a>
+    <a href="">Deneme</a>
+
+
+    <div class="container-flex">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+        <div class="flex-item">Item 5</div>
+        <div class="flex-item">Item 6</div>
+    </div>
+    <div class="container-grid">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 3</div>
+    </div>
+</body>
+</html>
