@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet(){
+            console.log("Merhaba")
+        }
+
+        greet()
+
+        function greet(name = "Misafir"){
+        console.log("Merhaba " + name)  
+        }
+        greet("Ahmet")
+
+        function square(number){
+            return number * number
+        }
+        let name = greet("Ahmet") //Undefined Gelir!
+        let result = square(5)
+        console.log(result)
+
+        let sayHello = function(){
+            console.log("Merhaba")
+        }
+
+        sayHello()
+
+        let multiply = (a,b) => a * b
+
+        console.log(multiply(3,4))
+    </script>
+</body>
+</html>

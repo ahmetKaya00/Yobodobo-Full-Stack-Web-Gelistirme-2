@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            color: blue;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="header">Başlık</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <button id="btn">Click</button>
+
+    <script>
+        let header = document.getElementById("header")
+        let paragraph = document.querySelector('p')
+        let btn = document.getElementById("btn")
+
+        console.log(header.textContent)
+
+        header.textContent = "Yeni Başlık";
+        paragraph.innerHTML = "<strong>Bu yeni paragraf</strong>";
+
+        header.style.color = "red";
+        paragraph.style.backgroundColor = "yellow";
+
+        let newParagraph = document.createElement("p");
+        newParagraph.id = "newParagraph";
+        newParagraph.textContent = "Bu yeni Element";
+        document.body.appendChild(newParagraph)
+
+        document.body.removeChild(newParagraph)
+
+        let ul = document.createElement("ul")
+        ul.id = "itemList";
+        for(let i = 1; i<=5;i++){
+            let li = document.createElement("li");
+            li.textContent = `Item ${i}`;
+            ul.appendChild(li)
+        }
+        document.body.appendChild(ul)
+
+        const itemList = document.getElementById("itemList")
+
+        itemList.addEventListener("click", function(event){
+            if(event.target.tagName === "LI"){
+                alert(event.target.textContent);
+            }
+        })
+
+        btn.addEventListener("click",function(){
+            let newItem = document.createElement("li");
+            newItem.textContent = `Item ${itemList.children.length + 1}`;
+            itemList.appendChild(newItem)
+        })
+    </script>
+</body>
+</html>
